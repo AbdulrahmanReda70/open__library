@@ -13,7 +13,6 @@ import { useRemoveFromAllBooksMutation } from '../api/authApiSlice';
 import { useNavigate } from 'react-router-dom';
 function Progress() {
     const { book, userId, setAllBooks, allBooks, path, bookId } = useOutletContext();
-    console.log("HELLO", book);
     const { refetch: refAllBooks } = useGetAllBooksQuery(userId);
     const { refetch: refBook } = useGetBookQuery({ userId, bookId });
 
@@ -35,7 +34,6 @@ function Progress() {
         }
     }, [prog]);
     function changeValue(event, value) {
-        console.log("+++", value);
 
         setSliderValue(value);
         refBook();
@@ -63,7 +61,6 @@ function Progress() {
                 copy.splice(f, 1);
                 setAllBooks(copy);
                 if (allBooks.length === 1) {
-                    console.log("====", allBooks.length);
                     nav("/bookStores", { replace: true });
                 } else {
                     nav("/myBooks/allBooks", { replace: true });
@@ -77,7 +74,6 @@ function Progress() {
             refAllBooks();
         }
     }
-    console.log("432", searchParam.get("n"));
 
     return (
         <>

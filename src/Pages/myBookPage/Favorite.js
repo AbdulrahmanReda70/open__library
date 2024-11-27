@@ -31,7 +31,6 @@ function Favorite() {
     async function handleSavedBook(book, e, index) {
         e.stopPropagation();
         const userConfirmed = window.confirm("Are you sure you want to continue🎯?");
-        console.log(allFavBooks.length);
         if (allFavBooks.length === 1) {
             let copy = [...allFavBooks];
             copy.splice(index, 1);

@@ -69,7 +69,6 @@ function SignUp() {
             }
         }
     };
-    console.log(errors);
 
     return (
         <div className='signUp-container'>

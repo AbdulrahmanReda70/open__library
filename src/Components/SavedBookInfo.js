@@ -56,7 +56,6 @@ function SavedBookInfo() {
 
         if (allBooks) {
             const res = allBooks.find(b => b.id === book.id);
-            console.log("9090", res);
 
             if (res) setAddBtn(true);
         }
@@ -74,7 +73,6 @@ function SavedBookInfo() {
         }
     }
 
-    console.log(book);
     function popup() {
         return (
             <>

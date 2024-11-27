@@ -17,12 +17,10 @@ function PersonalInfo() {
         if (confirm) {
             try {
                 await deleteUser(user);
-                console.log("User account deleted successfully.");
             } catch (error) {
                 console.error("Error deleting user account:", error.message);
             }
         } else {
-            console.log("No user is currently signed in.");
         }
 
 
@@ -33,7 +31,6 @@ function PersonalInfo() {
         });
     }, [user]);
 
-    console.log("user=", userId);
     return (
         <div className='personalInfo'>
             <div className='profile'>

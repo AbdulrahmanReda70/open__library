@@ -54,7 +54,6 @@ IconContainer.propTypes = {
 export default function RadioGroupRating({ book, userId }) {
     const { data: revValue, refetch, isLoading } = useGetReviewQuery({ userId, book });
     const [reviewValue, setReviewValue] = useState(2);
-    console.log(isLoading, "hello---");
 
     const [editReview] = useEditReviewMutation();
 
@@ -65,7 +64,6 @@ export default function RadioGroupRating({ book, userId }) {
         setReviewValue(newValue);
         editReview({ book, userId, newValue });
         refetch();
-        console.log("Selected Rating:", newValue);
     }
 
     return (

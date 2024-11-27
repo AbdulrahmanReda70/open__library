@@ -54,7 +54,6 @@ const GoogleStore = () => {
             for (let i = 0; i < books.length; i++) {
                 for (let j = 0; j < savedBooks.length; j++) {
                     if (books[i].id === savedBooks[j].id && !books[i].saved && !isLoading) {
-                        console.log("fire");
                         copy[i] = { ...copy[i], saved: true };
                         flag = true;
                     }

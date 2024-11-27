@@ -55,7 +55,6 @@ function BookInfo() {
 
         if (allBooks) {
             const res = allBooks.find(b => b.id === book.id);
-            console.log("9090", res);
 
             if (res) setAddBtn(true);
         }
@@ -73,7 +72,7 @@ function BookInfo() {
         }
     }
 
-    console.log(book);
+    (book);
     function popup() {
         return (
             <>

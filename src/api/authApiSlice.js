@@ -72,7 +72,6 @@ export const authApi = createApi({
 
         getBook: builder.query({
             async queryFn({ userId, bookId }) {
-                console.log(bookId);
                 try {
                     const DocRef = ref(db, `users/user_${userId}/books/allBooks/${bookId}`);
                     const snapShot = await get(DocRef);
@@ -186,7 +185,6 @@ export const authApi = createApi({
         editProgress: builder.mutation({
             async queryFn({ userId, book, sliderValue }) {
                 const nBook = { ...book, "progress": sliderValue };
-                // console.log(nBook, "--", sliderValue);
                 try {
                     const DocRef = ref(db, `users/user_${userId}/books/allBooks/${book.id}`);
                     await set(DocRef, nBook);  // Wait for the data to be saved
@@ -233,7 +231,6 @@ export const authApi = createApi({
                     const DocRef = ref(db, `users/user_${userId}/books/allBooks/${book.id}`);
                     const snapShot = (await get(DocRef)).val();
                     const result = Object.values(snapShot)[5]; //reviewValue
-                    console.log("dasdasda", result);
 
                     return { data: result };
                 } catch (error) {
@@ -269,7 +266,6 @@ export const authApi = createApi({
 
         saveNote_1: builder.mutation({
             async queryFn({ userId, book, valNote_1_cur }) {
-                console.log("RUN_______________");
 
                 try {
                     const DocRef = ref(db, `users/user_${userId}/books/allBooks/${book.id}/valNote_1`);

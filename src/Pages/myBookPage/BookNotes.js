@@ -53,7 +53,6 @@ function BookNotes() {
     function navConfirm_1() {
 
         if (searchParam.get("n") === "1") {
-            console.log("flag_1=", flag_1);
             if (flag_1) {
                 let confirm_result = window.confirm("The content is not saved. Are you sure you want to proceed?");
                 if (confirm_result) {
