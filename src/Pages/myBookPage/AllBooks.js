@@ -49,7 +49,6 @@ function AllBooks() {
                 flag.current = false;
             }
         }
-        console.log(allBooks);
 
     }, [allBooks, allFavBooksId]);
 
