@@ -1,0 +1,259 @@
+.storeHeader {
+  color: #3d3231;
+  font-family: cursive;
+  margin-top: 40px;
+}
+
+.bookStore {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  row-gap: 30px;
+  column-gap: 30px;
+  margin-bottom: 100px;
+}
+
+.store {
+  background-color: #181a1c;
+  border-radius: 20px;
+  width: 320px;
+  color: white;
+  height: 340px;
+  transition-duration: 0.1s;
+  margin: 10px auto;
+}
+
+.store:hover {
+  transform: scale(1.04);
+}
+
+.store .text {
+  padding: 0 20px;
+}
+
+.bookStore img {
+  width: 100%;
+}
+
+.bookStore .img {
+  width: 100%;
+  height: 185px;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  align-items: end;
+}
+/* Base styles for the "Coming Soon" ribbon */
+.comingSoon::before {
+  content: "Coming Soon";
+  position: absolute;
+  top: -6px;
+  right: 0px;
+  background-color: #ff6b6b;
+  color: white;
+  padding: 5px 20px;
+  font-weight: bold;
+  font-size: 14px;
+  transform: rotate(0deg);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+/* Make sure store cards are positioned relatively for the ribbon */
+.store {
+  position: relative;
+}
+
+.store-layout {
+  width: 100%;
+}
+
+.store-layout .header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.store-layout h1 {
+}
+
+.store-layout input {
+  width: 100%;
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 50px;
+}
+.store-layout input:focus {
+  /* border: 1px solid rgb(66, 133, 244); */
+}
+/* 
+.googleSearch {
+  position: relative;
+} */
+
+.googleSearch {
+  position: relative;
+  width: 180px;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  margin-bottom: 50px;
+}
+
+.store-layout .googleSearch :first-child {
+  position: absolute;
+  right: 20px;
+  top: 23%;
+  font-size: 20px;
+}
+
+.book-grid-store {
+  display: grid;
+  column-gap: 5px;
+  row-gap: 22px;
+  margin-top: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  margin-bottom: 50px;
+  padding-left: 20px;
+}
+
+.bookInfo-container {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #0000008c;
+  position: fixed;
+  top: 0;
+}
+
+.bookInfo-container .info {
+  background-color: rgb(32 34 36);
+  position: fixed;
+  width: 85%;
+  height: 580px;
+  display: flex;
+  top: 50%;
+  left: calc(50% + 25px);
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  column-gap: 50px;
+  padding: 15px 15px 35px 25px;
+  overflow: auto;
+  color: white;
+}
+
+.info-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: sticky;
+  top: 0px;
+}
+
+.info-side .buttons {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  justify-content: center;
+}
+
+.info-side button {
+  width: 100%;
+  background-color: #4caf50;
+  height: 46px;
+  border-radius: 9px;
+}
+
+.info-side2 {
+  margin-top: 30px;
+}
+
+.info-side img {
+  max-width: 200px;
+  min-width: 180px;
+  height: 238px;
+  border-radius: 6px;
+}
+
+.info .title {
+  padding-right: 85px;
+  padding-bottom: 14px;
+}
+
+.info2 {
+  position: relative;
+}
+
+.goBack {
+  position: absolute;
+  background-color: brown;
+  top: 10px;
+  width: 62px;
+  height: 46px;
+  right: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  border-radius: 5px;
+  transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+  .store {
+    width: 280px;
+  }
+
+  .bookInfo-container .info {
+    background-color: rgb(32 34 36);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    transform: unset;
+    column-gap: 50px;
+    padding: 5px;
+    padding-bottom: 70px;
+    overflow: auto;
+    color: white;
+    flex-direction: column;
+    position: fixed;
+  }
+
+  .info-side img {
+    margin: 5px auto;
+    width: 100%;
+  }
+
+  .info-side {
+    position: unset;
+  }
+  .info-side button {
+    width: 38%;
+    margin: 0 auto;
+  }
+
+  .info .title {
+    padding-right: 0px;
+  }
+}
+@media (max-width: 576px) {
+}
+@media (max-width: 380px) {
+  .bookStore {
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  }
+  .store {
+    width: 240px;
+  }
+  .store .text {
+    padding: 0 5px;
+    font-size: 13px;
+    font-weight: normal;
+  }
+  .info-side button {
+    width: 100%;
+  }
+  .book-progress button {
+  }
+}

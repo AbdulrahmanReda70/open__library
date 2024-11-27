@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmyapp=self.webpackChunkmyapp||[]).push([[519],{519:(e,t,n)=>{n.r(t),n.d(t,{default:()=>s});n(43);var p=n(579);const s=function(){return(0,p.jsx)("h1",{style:{position:"fixed",top:"43%",textAlign:"center",width:"100%"},children:"CardTodo"})}}}]);
+//# sourceMappingURL=519.b19066a1.chunk.js.map

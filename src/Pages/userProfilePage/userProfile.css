@@ -1,0 +1,54 @@
+.userProfile {
+  display: flex;
+}
+
+.personalInfo {
+  margin-top: 50px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+
+.profile h2 {
+  margin-bottom: 0;
+  background-color: black;
+  border-radius: 2px;
+}
+
+.profile p {
+  margin-top: 5px;
+}
+
+.profile img {
+  width: 80px;
+  border-radius: 50%;
+}
+
+.account-security {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.account-security h1 {
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+.security-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 20px;
+}
+
+.security-option button {
+  background-color: #17191a;
+  width: 97px;
+  padding: 12px 5px;
+  border-radius: 20px;
+  color: white;
+}
