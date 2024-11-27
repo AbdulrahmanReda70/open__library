@@ -39,7 +39,6 @@ const glowEffect = `
 
 function BooksGrid({ books, loading, cover, handleSavedBook, handleSavedIcon }) {
     if (books && !loading) {
-        (books);
         const bookMap = books.map((ele, index) => {
             if (ele === false) return null; // "if(ele) => not work"
 

@@ -72,7 +72,6 @@ function BookInfo() {
         }
     }
 
-    (book);
     function popup() {
         return (
             <>
