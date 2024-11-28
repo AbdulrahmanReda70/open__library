@@ -1,6 +1,6 @@
 # Open library app
 
-Check out the live project here: [Live Todo App](https://abdulrahman707.netlify.app/)
+Check out the live project here: [Open libarary ](https://abdulrahman707.netlify.app/)
 
 # Getting Started with Create React App
 
