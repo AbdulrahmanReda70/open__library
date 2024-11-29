@@ -60,16 +60,3 @@ To run this project locally, follow these steps:
    `npm start`
 
 ---
-
-### **Contributing**  
-Feel free to fork this project, submit issues, or make pull requests! Contributions are always welcome.
-
----
-
-### **Acknowledgments**  
-Thank you to the **open-source community** for providing such amazing libraries and tools that made this project possible.
-
----
-
-### **License**  
-This project is licensed under the MIT License.
